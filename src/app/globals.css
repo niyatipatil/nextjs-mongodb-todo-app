@@ -18,13 +18,9 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #111827; /* Replace with Tailwind's gray-900 equivalent */
 }
+
 
 @layer utilities {
   .text-balance {
