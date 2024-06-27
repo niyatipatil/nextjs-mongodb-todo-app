@@ -40,7 +40,10 @@ export async function POST(request) {
   });
   try {
     //password
-    user.password = bcrypt.hash(user.password);
+    user.password = await bcrypt.hash(
+      user.password,
+      parseInt(process.env.BCRYPT_SALT)
+    );
     const createdUser = await user.save(); //save to db
 
     const response = NextResponse.json(user, {
