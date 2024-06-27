@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="bg-purple-800 h-20 flex justify-between items-center px-8">
         <div className="logo">
-            <h1 className="font-bold text-xl italic">
+            <h1 className="font-bold text-white text-xl italic">
                 <Link href="/">
                     Task Tracker
                 </Link> 
@@ -29,10 +29,10 @@ const Navbar = () => {
         <div>
             <ul className="flex space-x-4">
                 <li>
-                    <a href="#!" className="text-white hover:text-yellow-400 font-semibold">LOGIN</a>
+                    <Link href={"/login"} className="text-white hover:text-yellow-400 font-semibold">LOGIN</Link>
                 </li>
                 <li>
-                    <a href="#!" className="text-white hover:text-yellow-400 font-semibold">SIGNUP</a>
+                    <Link href={"/signup"} className="text-white hover:text-yellow-400 font-semibold">SIGNUP</Link>
                 </li>
             </ul>
         </div>

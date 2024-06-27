@@ -5,7 +5,7 @@ const Feature = () => {
   return (
     <section className="bg-gray-900 text-white py-5">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-semibold mb-8 text-center">
+        <h2 className="text-2xl font-semibold mb-6 text-center">
           Features of Task Tracker
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

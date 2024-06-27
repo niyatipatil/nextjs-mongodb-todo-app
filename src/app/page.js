@@ -1,5 +1,8 @@
+import Footer from "@/components/Footer";
 import Feature from "@/components/homepage/Feature";
+import Information from "@/components/homepage/Information";
 import MainBanner from "@/components/homepage/MainBanner";
+import UserTestimonials from "@/components/homepage/UserTestimonials";
 import Image from "next/image";
 
 export default function Home() {
@@ -8,6 +11,9 @@ export default function Home() {
     <div>
       <MainBanner />
       <Feature />
+      <Information />
+      <UserTestimonials />
+      <Footer />
     </div>
     //</main>
   );

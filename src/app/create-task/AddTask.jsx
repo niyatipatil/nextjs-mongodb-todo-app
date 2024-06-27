@@ -68,7 +68,7 @@ const AddTask = () => {
             <label htmlFor="task_title" className="block mb-2 font-semibold">
               TITLE
             </label>
-            <input type="text" id="task_title" className="w-full p-2 bg-gray-700 border border-black rounded-lg" 
+            <input type="text" id="task_title" className="w-full p-2 text-white bg-gray-700 border border-black rounded-lg" 
             name="task_title"
             onChange={(event)=>{
               setTask({
@@ -84,7 +84,7 @@ const AddTask = () => {
             <label htmlFor="task_content" className="block mb-2 font-semibold">
               DESCRIPTION
             </label>
-            <textarea type="text" id="task_content" rows={4} className="w-full p-2 bg-gray-700 border border-black rounded-md"
+            <textarea type="text" id="task_content" rows={4} className="w-full p-2 text-white bg-gray-700 border border-black rounded-md"
             name="task_content"
             onChange={(event)=>{
               setTask({
@@ -100,7 +100,7 @@ const AddTask = () => {
             <label htmlFor="task_status" className="block mb-2 font-semibold">
               STATUS
             </label>
-            <select id="task_status" className="w-full p-2 bg-gray-700 border border-black rounded-md"
+            <select id="task_status" className="w-full p-2 text-white bg-gray-700 border border-black rounded-md"
              name="task_status"
              onChange={(event)=>{
                setTask({
