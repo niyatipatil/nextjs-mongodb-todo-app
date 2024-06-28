@@ -11,7 +11,7 @@ const AddTask = () => {
     content: "",
     status: "none",
     //temp setting id
-    userId: "667bdc30947a4c271d0d71db",
+    userId: "667d1d47c6776b4e91963e32",
   });
 
   const handleAddTask = async (event) => {
@@ -29,6 +29,8 @@ const AddTask = () => {
         title: "",
         content: "",
         status: "none",
+        //dk
+        //userId: "667d1d47c6776b4e91963e32",
       })
     }catch(error){
       console.log(error);
@@ -45,7 +47,7 @@ const AddTask = () => {
       title: "",
       content: "",
       status: "none",
-      userId: "667bdc30947a4c271d0d71db",
+      userId: "667d1d47c6776b4e91963e32",
     });
   };
   
@@ -111,14 +113,14 @@ const AddTask = () => {
              value={task.status} //2way data binding
             > 
               <option value="none" disabled>Select the Status</option>
-              <option value="Pending">Pending</option>
-              <option value="Completed">Completed</option>
+              <option value="pending">pending</option>
+              <option value="completed">completed</option>
             </select>
           </div>
 
           {/*Button*/}
           <div className="mt-8">
-            <button className="bg-purple-800 py-2 px-3 rounded-lg font-semibold hover:bg-purple-900 mr-4">Create Task</button>
+            <button className="bg-purple-800 py-2 px-3 rounded-lg font-semibold hover:bg-purple-900 mr-4">Create Task{" "}</button>
             <button type="button" onClick={handleClear} className="bg-red-600 py-2 px-3 rounded-lg font-semibold hover:bg-red-700">Clear</button>
           </div>
           {/*{JSON.stringify(task)}*/}

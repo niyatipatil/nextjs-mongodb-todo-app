@@ -1,14 +1,19 @@
 "use client"
-import React, { useState } from 'react'
+import UserContext from '@/context/userContext';
+import { login } from '@/services/userServices';
+import { useRouter } from 'next/navigation';
+import React, { useContext, useState } from 'react'
 import { toast } from 'react-toastify';
 
 const Login = () => {
+    const router = useRouter()
+    const context = useContext(UserContext);
     const [loginData, setLoginData] =  useState({
-     email: "",
+        email: "",
         password: "",
     });
 
-    const loginFormSubmitted = (event) => {
+    const loginFormSubmitted = async (event) => {
         event.preventDefault();
         console.log(loginData);
 
@@ -18,6 +23,21 @@ const Login = () => {
     }
         //val
         //login
+
+        try{
+            const result = await login(loginData)
+            console.log({result});
+            toast.success("Logged In");
+            //redirecting
+            context.setUser(result.user);
+            router.push("/")
+        }
+        catch(error){
+            console.log(error)
+            toast.error(error.response.data.message, 
+            { position: "top-right" }
+            );
+        }
     }
 
     const resetForm = () => {

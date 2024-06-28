@@ -3,6 +3,8 @@ import "./globals.css";
 import "react-toastify/dist/ReactToastify.css";
 import Navbar from "@/components/Navbar";
 import { ToastContainer } from "react-toastify";
+//import UserContext from "@/context/userContext";
+import UserProvider from "@/context/userProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,9 +17,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ToastContainer />
-        <Navbar />
-        {children}
+        <UserProvider>
+          <ToastContainer />
+          <Navbar />
+          {children}
+        </UserProvider>
       </body>
     </html>
   );
