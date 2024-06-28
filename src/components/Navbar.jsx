@@ -57,10 +57,10 @@ const Navbar = () => {
                     context.user &&
                     <>
                 <li>
-                    <Link href={"/#!"} className="text-white hover:text-yellow-400 font-semibold">{context.user.name}</Link>
+                    <Link href={"/#!"} className="text-white hover:text-yellow-400 hover:font-extrabold font-semibold">{context.user.name}</Link>
                 </li>
                 <li>
-                    <button onClick={doLogout} className="text-white hover:text-yellow-400 font-semibold">LOGOUT</button>
+                    <button onClick={doLogout} className="text-white hover:text-yellow-400 hover:font-extrabold font-semibold">LOGOUT</button>
                 </li>
                     </>
                 }
@@ -68,10 +68,10 @@ const Navbar = () => {
                     !context.user &&
                     <>
                 <li>
-                    <Link href={"/login"} className="text-white hover:text-yellow-400 font-semibold">LOGIN</Link>
+                    <Link href={"/login"} className="text-white hover:text-yellow-400 hover:font-extrabold font-semibold">LOGIN</Link>
                 </li>
                 <li>
-                    <Link href={"/signup"} className="text-white hover:text-yellow-400 font-semibold">SIGNUP</Link>
+                    <Link href={"/signup"} className="text-white hover:text-yellow-400 hover:font-extrabold font-semibold">SIGNUP</Link>
                 </li>
                     </>
                 }

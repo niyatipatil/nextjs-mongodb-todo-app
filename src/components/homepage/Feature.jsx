@@ -32,7 +32,7 @@ const Feature = () => {
 
 const FeatureCard = ({ icon, title, description }) => {
   return (
-    <div className="bg-purple-900 rounded-lg p-6 flex flex-col items-center justify-center text-center">
+    <div className="bg-purple-900 rounded-lg p-6 flex flex-col items-center justify-center text-center hover:border-2 hover:border-purple-700">
       <div className="mb-4">{icon}</div>
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="text-white">{description}</p>

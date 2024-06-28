@@ -23,7 +23,7 @@ const MainBanner = () => {
           <p className="text-xl mb-8">
           Stay productive, stay organized with our advanced Task Tracker!
           </p>
-          <Link href="/create-task" className="bg-yellow-400 text-black font-black px-4 py-2 mt-4 rounded-sm">
+          <Link href="/create-task" className="bg-yellow-400 text-black font-black px-4 py-2 mt-4 rounded-sm hover:bg-transparent hover:border-2 hover:border-yellow-400 hover:text-white">
             Create To-Do
           </Link>
         </div>

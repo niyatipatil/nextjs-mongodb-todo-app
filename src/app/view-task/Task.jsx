@@ -10,28 +10,30 @@ const Task = ({ task, deleteTaskPar }) => {
     }
 
   return (
-    <div className= {` shadow-md ${
-        task.status == "completed" ? "bg-green-700" : "bg-purple-800" 
+    <div className= {` rounded-lg mb-2 shadow-md ${
+        task.status == "completed" ? "bg-green-500" : "bg-purple-700" 
         }`}>
         {/* coditional render if task complete - change bg color */}
         <div className="p-6">
+            <div className="flex justify-between mb-3">
             <h1 className="font-bold text-2xl text-white">
                 {task.title}
             </h1>
-            <span className="cursor-pointer flex justify-center items-center rounded-full bg-purple-800 shadow-md w-8 h-8 hover:bg-purple-950" 
+            <span className="cursor-pointer flex justify-center items-center rounded-full bg-white shadow-md w-8 h-8 hover:bg-transparent hover:border-2 hover:border-red-600" 
             onClick={() => {deleteTask(task._id)}}>
                 <RxCross2/>
             </span>
-            <p className="font-medium">
+            </div>
+            <p className="font-semibold text-white">
                 {task.content}
             </p>
-            <div className="mt-4 flex justify-between">
-                <p className="text-left">
+            <div className="mt-3 flex justify-between text-white">
+                <p className="text-left font-semibold">
                     Status:{" "}
                     <span className="font-bold">{task.status.toUpperCase()}</span>
                 </p>
-                <p className="text-right">
-                    Creator: <span className="font-medium">{user?.name}</span>
+                <p className="text-right font-semibold">
+                    Creator: <span className="">{user?.name}</span>
                 </p>
             </div>
         </div>

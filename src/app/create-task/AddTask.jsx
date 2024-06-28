@@ -63,14 +63,14 @@ const AddTask = () => {
         />
         </div>
 
-        <h1 className="text-3xl text-center font-semibold">Create your task here!</h1>
+        <h1 className="text-3xl text-center font-semibold text-white">Create your task here!</h1>
         <form action="#!" onSubmit={handleAddTask}>
           {/*Task Title*/}
           <div className="mt-5">
-            <label htmlFor="task_title" className="block mb-2 font-semibold">
+            <label htmlFor="task_title" className="block mb-2 font-semibold text-white">
               TITLE
             </label>
-            <input type="text" id="task_title" className="w-full p-2 text-white bg-gray-700 border border-black rounded-lg" 
+            <input type="text" id="task_title" className="w-full p-2 text-black font-semibold bg-white border border-gray-700 rounded-lg" 
             name="task_title"
             onChange={(event)=>{
               setTask({
@@ -83,10 +83,10 @@ const AddTask = () => {
           </div>
           {/*Task Description*/}
           <div className="mt-4">
-            <label htmlFor="task_content" className="block mb-2 font-semibold">
+            <label htmlFor="task_content" className="block mb-2 font-semibold text-white">
               DESCRIPTION
             </label>
-            <textarea type="text" id="task_content" rows={4} className="w-full p-2 text-white bg-gray-700 border border-black rounded-md"
+            <textarea type="text" id="task_content" rows={4} className="w-full p-2 text-black font-semibold bg-white border border-gray-700 rounded-md"
             name="task_content"
             onChange={(event)=>{
               setTask({
@@ -99,10 +99,10 @@ const AddTask = () => {
           </div>
           {/*Task Status*/}
           <div className="mt-4">
-            <label htmlFor="task_status" className="block mb-2 font-semibold">
+            <label htmlFor="task_status" className="block mb-2 font-semibold text-white">
               STATUS
             </label>
-            <select id="task_status" className="w-full p-2 text-white bg-gray-700 border border-black rounded-md"
+            <select id="task_status" className="w-full p-2 text-black font-semibold bg-white border border-gray-700 rounded-md"
              name="task_status"
              onChange={(event)=>{
                setTask({
@@ -120,8 +120,8 @@ const AddTask = () => {
 
           {/*Button*/}
           <div className="mt-8">
-            <button className="bg-purple-800 py-2 px-3 rounded-lg font-semibold hover:bg-purple-900 mr-4">Create Task{" "}</button>
-            <button type="button" onClick={handleClear} className="bg-red-600 py-2 px-3 rounded-lg font-semibold hover:bg-red-700">Clear</button>
+            <button className="bg-green-600 py-2 px-3 rounded-lg text-white font-bold hover:bg-transparent hover:border-2 hover:border-green-600 mr-4">Create Task{" "}</button>
+            <button type="button" onClick={handleClear} className="bg-red-600 text-white py-2 px-3 rounded-lg font-bold hover:bg-transparent hover:border-2 hover:border-red-600">Clear</button>
           </div>
           {/*{JSON.stringify(task)}*/}
         </form>

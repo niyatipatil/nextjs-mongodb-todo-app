@@ -45,7 +45,7 @@ const UserTestimonials = () => {
 
   return (
     <section className="bg-gray-900 text-white py-5">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 mb-16">
         <h2 className="text-2xl font-semibold mb-6">
           What Our Users Say
         </h2>
