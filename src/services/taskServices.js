@@ -20,3 +20,17 @@ export async function deleteTask(taskId) {
     .then((response) => response.data);
   return result;
 }
+
+export async function updateTask(taskId, task) {
+  const result = await httpAxios
+    .put(`/api/tasks/${taskId}`, task)
+    .then((response) => response.data);
+  return result;
+}
+
+export async function getTask(taskId) {
+  const result = await httpAxios
+    .get(`/api/tasks/${taskId}`)
+    .then((response) => response.data);
+  return result;
+}

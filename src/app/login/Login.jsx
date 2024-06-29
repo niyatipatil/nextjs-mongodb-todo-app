@@ -51,12 +51,12 @@ const Login = () => {
     <div className="grid grid-cols-12 mt-5">
         <div className="col-span-4 col-start-5"> 
             <div className="py-2">
-                <h1 className="text-3xl text-center font-semibold mt-10">Login Here!</h1>
+                <h1 className="text-3xl text-center font-semibold mt-10 text-white">Login Here!</h1>
                 <form action="#!" className="flex flex-col items-center justify-center mt-5 mb-10" onSubmit={loginFormSubmitted}>
                     {/*this is for email*/}
                     <div className='mt-3'>
                     <label htmlFor="user_email" 
-                        className="block font-semibold text-center">
+                        className="block font-semibold text-center text-white">
                             Email
                         </label>
                         <input type="email" id="user_email" 
@@ -76,7 +76,7 @@ const Login = () => {
                          {/*this is for the password*/}
                          <div className='mt-3'>
                          <label htmlFor="user_password" 
-                        className="block font-semibold text-center">
+                        className="block font-semibold text-center text-white">
                             Password
                         </label>
                         <input type="password" id="user_password" className="w-full p-2 bg-purple-950 border border-black rounded-full text-white text-center font-light mb-3" 
@@ -94,11 +94,11 @@ const Login = () => {
 
                         <div className="mt-5 text-center">
                         <button type="submit" 
-                        className="bg-green-700 py-2 px-3 ms-4 rounded-lg font-semibold hover:bg-green-900 mr-4">
+                        className="bg-green-700 py-2 px-3 ms-4 rounded-lg font-semibold hover:bg-green-900 mr-4 text-white">
                             Login
                         </button>
                         <button type="button" onClick={resetForm} 
-                        className="bg-red-700 py-2 px-3 rounded-lg font-semibold hover:bg-red-900 mr-4">
+                        className="bg-red-700 py-2 px-3 rounded-lg font-semibold hover:bg-red-900 mr-4 text-white">
                             Reset
                         </button>
                         </div>

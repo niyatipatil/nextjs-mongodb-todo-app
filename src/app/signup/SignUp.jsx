@@ -81,7 +81,7 @@ const SignUp = () => {
     <div className="grid grid-cols-12 mt-5">
         <div className="col-span-4 col-start-5"> 
         {/*4 cols taken by the content and begin from 5*/}
-            <div className="py-2">
+            <div className="py-2 text-white">
                 <div className="">
                     <center>
                     <Image 
@@ -172,10 +172,10 @@ const SignUp = () => {
                     </div>
                     <div className="mt-2 text-center">
                         <button type="submit" 
-                        className="bg-green-700 py-2 px-3 ms-4 rounded-lg font-semibold hover:bg-green-900 mr-4">
+                        className="bg-green-700 py-2 px-3 ms-4 rounded-lg font-semibold hover:bg-green-900 mr-4 text-white">
                             Sign Up
                         </button>
-                        <button type="button" onClick={resetForm} className="bg-red-700 py-2 px-3 rounded-lg font-semibold hover:bg-red-900 mr-4">Reset</button>
+                        <button type="button" onClick={resetForm} className="bg-red-700 py-2 px-3 rounded-lg font-semibold hover:bg-red-900 mr-4 text-white">Reset</button>
                     </div>
                     {/*{JSON.stringify(data)}*/}
                 </form>

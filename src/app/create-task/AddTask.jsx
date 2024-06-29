@@ -1,11 +1,13 @@
 "use client";
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image';
 import createTsk from '../../assets/add-task.png';
-import { addTask } from '@/services/taskServices';
+import { addTask, getTask, updateTask } from '@/services/taskServices';
 import { toast } from 'react-toastify';
+import { useRouter, useSearchParams } from 'next/navigation'
 
 const AddTask = () => {
+  const router = useRouter();
   const [task, setTask] = useState({
     title: "",
     content: "",
@@ -13,17 +15,37 @@ const AddTask = () => {
     //temp setting id
     userId: "667d1d47c6776b4e91963e32",
   });
+  
+  const [taskId, setTaskId] = useState()
 
+  const searchParams = useSearchParams()
+  useEffect(() => {
+    const taskId = searchParams.get('task_id')
+    console.log(taskId);
+    if (taskId) {
+      setTaskId(taskId);
+      getTaskDetails(taskId);
+    }
+  }, [])
+  
+  const getTaskDetails = async (taskId) => {
+    const task = await getTask(taskId);
+    console.log({task});
+    setTask(task);
+  }
   const handleAddTask = async (event) => {
     event.preventDefault();
     console.log(task);
     //v
     try{
-      const result = await addTask(task)
+      const result = taskId ? await updateTask(taskId, task) : await addTask(task)
       console.log(result)
-      toast.success("Your task is added successfully!", {
+      toast.success(taskId ? "Your task is Updated!" : "Your task is added successfully!", {
         position: "top-right",
       });
+      if(taskId){
+        router.push('/view-task')
+      }
 
       setTask({
         title: "",
@@ -120,7 +142,7 @@ const AddTask = () => {
 
           {/*Button*/}
           <div className="mt-8">
-            <button className="bg-green-600 py-2 px-3 rounded-lg text-white font-bold hover:bg-transparent hover:border-2 hover:border-green-600 mr-4">Create Task{" "}</button>
+            <button className="bg-green-600 py-2 px-3 rounded-lg text-white font-bold hover:bg-transparent hover:border-2 hover:border-green-600 mr-4">{taskId? "Update" : "Create"}</button>
             <button type="button" onClick={handleClear} className="bg-red-600 text-white py-2 px-3 rounded-lg font-bold hover:bg-transparent hover:border-2 hover:border-red-600">Clear</button>
           </div>
           {/*{JSON.stringify(task)}*/}
