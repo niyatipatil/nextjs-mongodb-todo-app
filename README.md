@@ -1,4 +1,49 @@
+# Task Tracker
+
+Task Tracker is a simple and efficient task management application built using Next.js and MongoDB. It helps you keep track of your tasks, allowing you to create, update, view, and delete tasks easily.
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Features
+
+- User Authentication (Login and Signup)
+- Task Creation, Viewing, Updating, and Deletion
+- Real-time Updates
+
+## Usage
+
+After setting up the project, you can access the Task Tracker application at http://localhost:3000. Use the interface to manage your tasks:
+
+- **Create Task:** Navigate to the create task page to add new tasks.
+- **View Tasks:** View all your tasks in a list format.
+- **Update Task:** Click on a task to edit its details.
+- **Delete Task:** Remove tasks that are no longer needed.
+
+## Technologies Used
+
+Frontend:
+
+- Next.js
+- React
+- Tailwind CSS
+
+Backend:
+
+- Node.js
+- Express
+
+Database:
+
+- MongoDB
+
+## Environment Variables
+
+Create a .env file in the root directory and add the following environment variables:
+
+```
+MONGODB_URI=your-mongodb-connection-string
+JWT_SECRET=your-jwt-secret
+NEXT_PUBLIC_API_BASE_URL=your-api-base-url
+```
 
 ## Getting Started
 
